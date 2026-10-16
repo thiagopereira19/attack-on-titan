@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attack on Titan | Por que você precisa assistir</title>
+    <meta
+      name="description"
+      content="Um guia sem spoilers para descobrir Attack on Titan, um dos animes mais comentados do mundo."
+    />
+    <meta name="theme-color" content="#14181a" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Attack on Titan | Por que você precisa assistir"
+    />
+    <meta
+      property="og:description"
+      content="Um guia sem spoilers para descobrir Attack on Titan, um dos animes mais comentados do mundo."
+    />
+    <meta property="og:image" content="images/hero-poster.jpg" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2314181a'/%3E%3Cpath d='M18 82V40l32-22 32 22v42H64V50L50 40 36 50v32z' fill='%23c2a468'/%3E%3C/svg%3E"
+    />
+
+    <!-- Evita a piscada das animações de entrada (o CSS só esconde os elementos quando há JavaScript) -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbarNav"
+    data-bs-root-margin="-80px 0px -55%"
+    tabindex="0"
+  >
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-xl navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">Attack on Titan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#premissa">Premissa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#porque">Por que assistir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#personagens">Personagens</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#inimigo">O inimigo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#temporadas">Temporadas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galeria">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">Perguntas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= TOPO ================= -->
+    <header class="hero" id="inicio">
+      <!--
+        AQUI COLOCAMOS: o edit do TikTok como vídeo de fundo. Arquivo: images/hero.mp4 (10 a 20 s, com áudio)
+        Precisa estar em H.264 + AAC: vídeos do TikTok costumam vir em H.265 e não tocam no Chrome/Firefox.
+        Conversão com boa qualidade (ffmpeg):
+        ffmpeg -i tiktok.mp4 -c:v libx264 -preset slow -crf 20 -tune animation -pix_fmt yuv420p -vf "scale=-2:'min(1080,ih)'" -c:a aac -b:a 160k -movflags +faststart images/hero.mp4
+        Opcional: images/hero-poster.jpg (primeiro quadro, aparece enquanto o vídeo carrega)
+      -->
+      <video
+        id="heroVideo"
+        class="hero-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="images/hero-poster.jpg"
+        disablepictureinpicture
+        disableremoteplayback
+        aria-hidden="true"
+      >
+        <source src="images/edit2.mp4" type="video/mp4" />
+      </video>
+
+      <div class="container">
+        <span class="tag-free">100% sem spoilers</span>
+        <div class="jp" lang="ja">進撃の巨人</div>
+        <h1>Attack<br />on Titan</h1>
+        <p class="hero-lead">
+          A humanidade vive atrás de muralhas. Lá fora, algo espera. Até que um
+          dia, a paz acaba, e três amigos precisam escolher entre se esconder ou
+          lutar.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#porque" class="btn btn-brass">Por que assistir</a>
+          <a href="#premissa" class="btn btn-ghost">Entender a premissa</a>
+        </div>
+      </div>
+
+      <div class="hero-controls">
+        <button
+          id="playBtn"
+          class="hero-btn play-btn"
+          type="button"
+          aria-label="Pausar vídeo"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path class="icon-play" d="M8 5v14l11-7z"></path>
+            <path class="icon-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"></path>
+          </svg>
+          <span class="play-label">Pausar</span>
+        </button>
+
+        <button
+          id="soundBtn"
+          class="hero-btn sound-btn"
+          type="button"
+          aria-pressed="false"
+          aria-label="Ativar som do vídeo"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M11 5 6 9H2v6h4l5 4V5z"></path>
+            <path class="wave" d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+            <path class="wave" d="M18.5 5.5a9 9 0 0 1 0 13"></path>
+            <path class="mute-x" d="m16 9 6 6M22 9l-6 6"></path>
+          </svg>
+          <span class="sound-label">Ativar som</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container" id="conteudo">
+      <!-- ================= NÚMEROS ================= -->
+      <section class="pt-5" aria-label="Números da série">
+        <div class="row g-3">
+          <div class="col-6 col-lg-3">
+            <div class="fact-card">
+              <div class="value">87</div>
+              <div class="label">Episódios</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="fact-card">
+              <div class="value">4</div>
+              <div class="label">Temporadas</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="fact-card">
+              <div class="value">2013</div>
+              <div class="label">Ano de estreia</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="fact-card">
+              <div class="value value-text">Ação, drama e mistério</div>
+              <div class="label">Gêneros</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PREMISSA ================= -->
+      <section id="premissa">
+        <h2>A premissa</h2>
+        <p class="section-lead mb-4">
+          Tudo o que você precisa saber para começar. Nem uma palavra a mais.
+        </p>
+
+        <div
+          id="carouselStory"
+          class="carousel slide mx-auto"
+          data-bs-ride="false"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselStory"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Parte 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselStory"
+              data-bs-slide-to="1"
+              aria-label="Parte 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselStory"
+              data-bs-slide-to="2"
+              aria-label="Parte 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!-- AQUI COLOCAMOS: as muralhas gigantes cercando a cidade. Arquivo: images/premissa/1.jpg | 1200 x 675 -->
+              <div class="img-slot slide-media" data-label="Imagem 1200 x 675">
+                <img
+                  src="images/premissa/1.jpg"
+                  alt="As muralhas"
+                  onerror="this.remove()"
+                />
+              </div>
+              <h3>O mundo atrás das muralhas</h3>
+              <p>
+                Há mais de cem anos, o que restou da humanidade vive em uma
+                cidade cercada por três muralhas gigantescas. Dentro delas
+                existe paz. Fora delas, existe o resto.
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <!-- AQUI COLOCAMOS: um Titã ao longe, de forma ameaçadora. Arquivo: images/premissa/2.jpg | 1200 x 675 -->
+              <div class="img-slot slide-media" data-label="Imagem 1200 x 675">
+                <img
+                  src="images/premissa/2.jpg"
+                  alt="A ameaça"
+                  onerror="this.remove()"
+                />
+              </div>
+              <h3>A ameaça</h3>
+              <p>
+                Os Titãs são gigantes que devoram pessoas. Ninguém sabe de onde
+                vieram, e ninguém sabe como detê-los. Só sabem que, enquanto
+                houver muralhas, ainda há esperança.
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <!-- AQUI COLOCAMOS: Eren, Mikasa e Armin juntos, em tom de decisão. Arquivo: images/premissa/3.jpg | 1200 x 675 -->
+              <div class="img-slot slide-media" data-label="Imagem 1200 x 675">
+                <img
+                  src="images/premissa/3.jpg"
+                  alt="A escolha"
+                  onerror="this.remove()"
+                />
+              </div>
+              <h3>A escolha</h3>
+              <p>
+                Um dia, a paz acaba. Três amigos de infância precisam decidir o
+                que fazer com o medo. Daí em diante, cada episódio muda o jogo.
+              </p>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselStory"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span
+            ><span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselStory"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span
+            ><span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+        <p class="spoiler-note mt-4 mx-auto" style="max-width: 820px">
+          Prometemos: este site só conta o que o início da série já mostra. O
+          resto é por sua conta.
+        </p>
+      </section>
+
+      <!-- ================= POR QUE ASSISTIR ================= -->
+      <section id="porque">
+        <h2>Por que assistir</h2>
+        <p class="section-lead mb-4">
+          Seis motivos para dar o play ainda hoje.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="why-card">
+              <h3>Tensão que não deixa pausar</h3>
+              <p>
+                Cada episódio termina pedindo o próximo. Quando você perceber,
+                já é de madrugada.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="why-card">
+              <h3>Reviravoltas de verdade</h3>
+              <p>
+                A história muda de direção quando você menos espera, e nada é
+                gratuito: tudo faz sentido depois.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="why-card">
+              <h3>Personagens humanos</h3>
+              <p>
+                Ninguém é perfeito e ninguém é só uma coisa. Você vai torcer,
+                discordar e sofrer junto.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="why-card">
+              <h3>Animação e trilha de cinema</h3>
+              <p>
+                Cenas de ação fluidas, uma trilha épica e um mundo desenhado com
+                muito cuidado.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="why-card">
+              <h3>Um mundo cheio de mistérios</h3>
+              <p>
+                Quanto mais você descobre, mais perguntas surgem. E as respostas
+                valem a espera.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="why-card">
+              <h3>Um fenômeno mundial</h3>
+              <p>
+                Uma das séries de anime mais comentadas da década, com uma
+                comunidade enorme para conversar depois.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PERSONAGENS ================= -->
+      <section id="personagens">
+        <h2>Personagens</h2>
+        <p class="section-lead mb-4">
+          Quem você vai acompanhar. Só o que dá para saber logo no começo.
+        </p>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card">
+              <!-- AQUI COLOCAMOS: o Eren Yeager. Arquivo: images/herois/eren.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="E">
+                <img
+                  src="images/herois/eren.jpg"
+                  alt="Eren Yeager"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Eren Yeager</h3>
+                <div class="role">Protagonista</div>
+                <p>
+                  Impulsivo, teimoso e incapaz de aceitar uma vida atrás de
+                  muralhas. Ele quer liberdade, e vai atrás dela.
+                </p>
+                <span class="badge">Recruta</span>
+                <span class="badge">Determinação</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card">
+              <!-- AQUI COLOCAMOS: a Mikasa Ackerman. Arquivo: images/herois/mikasa.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="M">
+                <img
+                  src="images/herois/mikasa.jpg"
+                  alt="Mikasa Ackerman"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Mikasa Ackerman</h3>
+                <div class="role">Soldado de elite</div>
+                <p>
+                  Calada, precisa e perigosa em combate. Existe uma coisa no
+                  mundo que ela não aceita perder.
+                </p>
+                <span class="badge">Talento nato</span>
+                <span class="badge">Lealdade</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card">
+              <!-- AQUI COLOCAMOS: o Armin Arlert. Arquivo: images/herois/armin.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="A">
+                <img
+                  src="images/herois/armin.jpg"
+                  alt="Armin Arlert"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Armin Arlert</h3>
+                <div class="role">Estrategista</div>
+                <p>
+                  O mais frágil do grupo e, muitas vezes, o mais corajoso para
+                  pensar. Onde os outros veem o fim, ele vê um plano.
+                </p>
+                <span class="badge">Inteligência</span>
+                <span class="badge">Recruta</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card">
+              <!-- AQUI COLOCAMOS: o Levi Ackerman. Arquivo: images/herois/levi.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="L">
+                <img
+                  src="images/herois/levi.jpg"
+                  alt="Levi Ackerman"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Levi Ackerman</h3>
+                <div class="role">Capitão</div>
+                <p>
+                  Uma lenda entre os soldados, conhecido pela força absurda e
+                  por não suportar sujeira. Quando ele entra em cena, a batalha
+                  muda.
+                </p>
+                <span class="badge">Tropa de Exploração</span>
+                <span class="badge">Lenda</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card">
+              <!-- AQUI COLOCAMOS: o Erwin Smith. Arquivo: images/herois/erwin.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="E">
+                <img
+                  src="images/herois/erwin.jpg"
+                  alt="Erwin Smith"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Erwin Smith</h3>
+                <div class="role">Comandante</div>
+                <p>
+                  Líder da Tropa de Exploração. Pede o impossível aos seus
+                  soldados e consegue convencê-los de que vale a pena.
+                </p>
+                <span class="badge">Tropa de Exploração</span>
+                <span class="badge">Liderança</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card">
+              <!-- AQUI COLOCAMOS: a Hange Zoë. Arquivo: images/herois/hange.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="H">
+                <img
+                  src="images/herois/hange.jpg"
+                  alt="Hange Zoë"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Hange Zoë</h3>
+                <div class="role">Pesquisadora</div>
+                <p>
+                  Excêntrica, brilhante e fascinada justamente pelo que todo
+                  mundo teme. Faz as perguntas que ninguém mais tem coragem de
+                  fazer.
+                </p>
+                <span class="badge">Tropa de Exploração</span>
+                <span class="badge">Curiosidade</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= O INIMIGO ================= -->
+      <section id="inimigo">
+        <h2>O inimigo</h2>
+        <p class="section-lead mb-4">
+          Os que você vai encontrar pelo caminho. Um segredo continua trancado.
+        </p>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card villain">
+              <!-- AQUI COLOCAMOS: um Titã imponente. Arquivo: images/viloes/titans.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="T">
+                <img
+                  src="images/viloes/titansjpg.jpg"
+                  alt="Os Titãs"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Os Titãs</h3>
+                <div class="role">A ameaça constante</div>
+                <p>
+                  Gigantes que devoram pessoas e não param por nada. Ninguém
+                  consegue explicar de onde vieram.
+                </p>
+                <span class="badge">Ameaça constante</span>
+                <span class="badge">Origem desconhecida</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card villain">
+              <!-- AQUI COLOCAMOS: o Titã Colossal acima das muralhas. Arquivo: images/viloes/colossal.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="C">
+                <img
+                  src="images/viloes/colossal.jpg"
+                  alt="Titã Colossal"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Titã Colossal</h3>
+                <div class="role">Maior que as muralhas</div>
+                <p>
+                  Um gigante tão alto que enxerga por cima das muralhas. Ninguém
+                  tinha visto algo assim, e o dia em que ele aparece muda tudo.
+                </p>
+                <span class="badge">Tamanho colossal</span>
+                <span class="badge">Surge do nada</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card villain">
+              <!-- AQUI COLOCAMOS: um Titã anormal em movimento estranho. Arquivo: images/viloes/anormais.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="A">
+                <img
+                  src="images/viloes/anormais.jpg"
+                  alt="Titãs anormais"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Titãs anormais</h3>
+                <div class="role">Imprevisíveis</div>
+                <p>
+                  A maioria dos Titãs segue um padrão. Esses não: se movem de um
+                  jeito estranho, mudam de rumo e ninguém sabe o que vão fazer.
+                </p>
+                <span class="badge">Imprevisíveis</span>
+                <span class="badge">Perigo extra</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card villain">
+              <!-- AQUI COLOCAMOS: o Titã Bestial. Arquivo: images/viloes/bestial.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="B">
+                <img
+                  src="images/viloes/bestial.jpg"
+                  alt="Titã Bestial"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Titã Bestial</h3>
+                <div class="role">Coberto de pelos</div>
+                <p>
+                  Um Titã com corpo de besta, que arremessa pedras como se
+                  fossem balas. Ele não age por instinto, e é isso que mais
+                  assusta.
+                </p>
+                <span class="badge">Arremesso</span>
+                <span class="badge">Calculista</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card villain">
+              <!-- AQUI COLOCAMOS: o Titã de Ataque. Arquivo: images/viloes/ataque.jpg | 600 x 750 -->
+              <figure class="img-slot char-photo" data-label="T">
+                <img
+                  src="images/viloes/ataque.jpg"
+                  alt="Titã de Ataque"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </figure>
+              <div class="char-body">
+                <h3>Titã de Ataque</h3>
+                <div class="role">Diferente de todos</div>
+                <p>
+                  Um Titã que não se parece com os outros. Ele luta como quem
+                  sabe exatamente o que está fazendo, e ninguém entende por quê.
+                </p>
+                <span class="badge">Força bruta</span>
+                <span class="badge">Mistério</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <article class="char-card villain classified">
+              <figure class="img-slot char-photo" data-label="?"></figure>
+              <div class="char-body">
+                <h3>
+                  <span class="redact" role="img" aria-label="Nome oculto"
+                    >XXXXXXXXXXX</span
+                  >
+                </h3>
+                <div class="role">
+                  <span class="redact" role="img" aria-label="Função oculta"
+                    >XXXXXXXXXXXX</span
+                  >
+                </div>
+                <p>
+                  Arquivo classificado. Esta informação só se abre no episódio
+                  certo.
+                </p>
+                <span class="badge">Classificado</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TEMPORADAS ================= -->
+      <section id="temporadas">
+        <h2>As temporadas</h2>
+        <p class="section-lead mb-4">
+          Um guia rápido do que esperar, sem estragar nada.
+        </p>
+        <div class="table-container">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead>
+                <tr>
+                  <th scope="col">Temporada</th>
+                  <th scope="col">Estreia</th>
+                  <th scope="col">Episódios</th>
+                  <th scope="col">O que esperar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2013</td>
+                  <td>25</td>
+                  <td>
+                    A porta de entrada: o mundo, o medo e a primeira grande
+                    escolha.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>2017</td>
+                  <td>12</td>
+                  <td>A tensão aumenta e as perguntas começam a pesar.</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>2018</td>
+                  <td>22</td>
+                  <td>
+                    As peças começam a se encaixar, e nada é como parecia.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4 (final)</th>
+                  <td>2020</td>
+                  <td>28</td>
+                  <td>
+                    A reta final de uma jornada que você não vai esquecer.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GALERIA ================= -->
+      <section id="galeria">
+        <h2>Galeria</h2>
+        <p class="section-lead mb-4">
+          Um gostinho do que te espera. Clique em uma imagem para ampliar.
+        </p>
+        <div class="row g-3">
+          <div class="col-6 col-lg-4">
+            <figure class="gallery-item m-0">
+              <!-- AQUI COLOCAMOS: o equipamento de manobra tridimensional em ação. Arquivo: images/galeria/1.jpg | 1200 x 750 -->
+              <div
+                class="img-slot gallery-media"
+                data-label="Imagem 1200 x 750"
+              >
+                <img
+                  src="images/galeria/1.jpg"
+                  alt="Manobra tridimensional"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <figcaption>Manobra tridimensional</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <figure class="gallery-item m-0">
+              <!-- AQUI COLOCAMOS: as muralhas vistas de longe. Arquivo: images/galeria/2.jpg | 1200 x 750 -->
+              <div
+                class="img-slot gallery-media"
+                data-label="Imagem 1200 x 750"
+              >
+                <img
+                  src="images/galeria/2.jpg"
+                  alt="As muralhas"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <figcaption>As muralhas</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <figure class="gallery-item m-0">
+              <!-- AQUI COLOCAMOS: um Titã de frente, de forma impactante. Arquivo: images/galeria/3.jpg | 1200 x 750 -->
+              <div
+                class="img-slot gallery-media"
+                data-label="Imagem 1200 x 750"
+              >
+                <img
+                  src="images/galeria/3.jpg"
+                  alt="Os Titãs"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <figcaption>Os Titãs</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <figure class="gallery-item m-0">
+              <!-- AQUI COLOCAMOS: a Tropa de Exploração com as capas verdes. Arquivo: images/galeria/4.jpg | 1200 x 750 -->
+              <div
+                class="img-slot gallery-media"
+                data-label="Imagem 1200 x 750"
+              >
+                <img
+                  src="images/galeria/4.jpg"
+                  alt="Tropa de Exploração"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <figcaption>A Tropa de Exploração</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <figure class="gallery-item m-0">
+              <!-- AQUI COLOCAMOS: os recrutas em treinamento. Arquivo: images/galeria/5.jpg | 1200 x 750 -->
+              <div
+                class="img-slot gallery-media"
+                data-label="Imagem 1200 x 750"
+              >
+                <img
+                  src="images/galeria/5.jpg"
+                  alt="Recrutas em treinamento"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <figcaption>Recrutas em treinamento</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <figure class="gallery-item m-0">
+              <!-- AQUI COLOCAMOS: arte do trio principal (Eren, Mikasa e Armin). Arquivo: images/galeria/6.jpg | 1200 x 750 -->
+              <div
+                class="img-slot gallery-media"
+                data-label="Imagem 1200 x 750"
+              >
+                <img
+                  src="images/galeria/6.jpg"
+                  alt="Eren, Mikasa e Armin"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <figcaption>Eren, Mikasa e Armin</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PERGUNTAS FREQUENTES ================= -->
+      <section id="faq">
+        <h2>Perguntas frequentes</h2>
+        <p class="section-lead mb-4">
+          As dúvidas de quem está prestes a começar.
+        </p>
+
+        <div class="accordion" id="faqList" data-bs-theme="dark">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q1"
+                aria-expanded="true"
+                aria-controls="q1"
+              >
+                Preciso conhecer anime para gostar?
+              </button>
+            </h3>
+            <div
+              id="q1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqList"
+            >
+              <div class="accordion-body">
+                Não. Muita gente teve aqui a primeira experiência com anime. É
+                uma história de aventura, mistério e drama que funciona para
+                qualquer público maduro.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q2"
+                aria-expanded="false"
+                aria-controls="q2"
+              >
+                É muito violento?
+              </button>
+            </h3>
+            <div
+              id="q2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqList"
+            >
+              <div class="accordion-body">
+                Sim. Tem cenas fortes e temas pesados, então é indicado para um
+                público mais maduro. Se você curte séries intensas, vai se
+                sentir em casa.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q3"
+                aria-expanded="false"
+                aria-controls="q3"
+              >
+                Preciso ler o mangá antes?
+              </button>
+            </h3>
+            <div
+              id="q3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqList"
+            >
+              <div class="accordion-body">
+                Não. O anime conta a história do começo e foi feito para quem
+                chega sem saber nada.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q4"
+                aria-expanded="false"
+                aria-controls="q4"
+              >
+                Quanto tempo leva para assistir tudo?
+              </button>
+            </h3>
+            <div
+              id="q4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqList"
+            >
+              <div class="accordion-body">
+                Cerca de 35 horas somando todos os episódios. Com alguns
+                episódios por dia, dá para terminar em poucas semanas.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q5"
+                aria-expanded="false"
+                aria-controls="q5"
+              >
+                Por onde eu começo?
+              </button>
+            </h3>
+            <div
+              id="q5"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqList"
+            >
+              <div class="accordion-body">
+                Pelo episódio 1 da primeira temporada. E um conselho: fuja de
+                resumos, vídeos e comentários na internet. A série é cheia de
+                surpresas, e vale muito a pena descobrir tudo do zero.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CHAMADA FINAL ================= -->
+      <section class="cta-final text-center" aria-label="Comece agora">
+        <h2>Pronto para entrar?</h2>
+        <p class="mx-auto">As muralhas estão de pé. Por enquanto.</p>
+        <!-- Troque o # pelo link do seu streaming preferido -->
+        <a href="#" class="btn btn-brass btn-lg">Começar pelo episódio 1</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <figure class="erwin-quote">
+          <blockquote>
+            Vamos, soldados! Gritem, soldados! Ofereçam os seus corações!
+          </blockquote>
+          <figcaption>Erwin Smith</figcaption>
+        </figure>
+        Projeto de estudo com HTML, CSS e Bootstrap. Attack on Titan (Shingeki
+        no Kyojin) pertence a Hajime Isayama, Wit Studio e MAPPA. Vídeo do topo:
+        edit de fã (TikTok), crédito ao criador original.
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
